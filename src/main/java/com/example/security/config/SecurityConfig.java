@@ -40,7 +40,6 @@ public class SecurityConfig {
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
                 .logout(logout -> logout
                         .logoutUrl("/perform_logout")
-                        .deleteCookies()
                 )
                 .build();
     }
