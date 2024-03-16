@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
                 .logout(logout -> logout
-                        .logoutUrl("/logout")
+                        .logoutUrl("/perform_logout")
                         .addLogoutHandler(new SecurityContextLogoutHandler())
                 )
                 .build();
